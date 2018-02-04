@@ -41,6 +41,14 @@ app.use(function(err,req,res,next){
      res.render('500');
 });
 
+app.get('/tours/hood-river',function(req,res){
+     res.render('tours/hood-river');
+});
+
+app.get('/tours/request-group-rate',function(req,res){
+     res.render('tours/request-group-rate');
+});
+
 app.listen(app.get('port'),function(){
     console.log('Express startes on http://localhost:'+app.get('port')+';press Ctrl-C to terminate.');
 })
