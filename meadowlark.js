@@ -28,6 +28,14 @@ app.get('/about',function(req,res){
      });
 });
 
+app.get('/tours/hood-river',function(req,res){
+        res.render('tours/hood-river');
+})
+
+app.get('/tours/request-group-rate',function(req,res){
+        res.render('tours/request-group-rate');
+});
+
 app.use(express.static(__dirname+'/public'));
 app.use(function(req,res){
      res.status(404);
@@ -41,12 +49,8 @@ app.use(function(err,req,res,next){
      res.render('500');
 });
 
-app.get('/tours/hood-river',function(req,res){
-     res.render('tours/hood-river');
-});
-
-app.get('/tours/request-group-rate',function(req,res){
-     res.render('tours/request-group-rate');
+app.get('/hood',function(req,res){
+     res.render('hood');
 });
 
 app.listen(app.get('port'),function(){
